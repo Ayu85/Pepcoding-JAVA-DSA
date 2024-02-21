@@ -15,7 +15,7 @@ public class checkPrime {
     }
 
     public static void main(String[] args) {
-        System.out.println(checkOptimal(97));
+        System.out.println(checkOptimal(36));
         
     }
 }
