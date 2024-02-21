@@ -8,8 +8,9 @@ public class printAllPrimesTillN {
     }
 
     public static void main(String[] args) {
-        int n = 15;
-        for (int i = 2; i <= n; i++) {
+        int low= 5;
+        int high=15;
+        for (int i = low; i <= high; i++) {
             if(isPrime(i))
             System.out.print(i+" ");
         }
