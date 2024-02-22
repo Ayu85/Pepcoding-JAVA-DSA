@@ -10,7 +10,7 @@ public class rotateNum {
             pow++;
             k--;
             System.out.println(k);
-            i++;
+
         }
         return result;
     }
