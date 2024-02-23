@@ -1,10 +1,10 @@
 public class rotateNum {
     static int rotate(int num, int k) {
         int result = 0;
-        int pow = k;
+        int pow = k+1;
         while (k > 0) {
             int rem = num % 10;
-            result += rem * Math.pow(10, pow - 1);
+            result += rem * Math.pow(10, pow);
             num /= 10;
             pow++;
             k--;
