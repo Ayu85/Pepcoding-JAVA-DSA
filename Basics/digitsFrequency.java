@@ -11,6 +11,6 @@ public class digitsFrequency {
     }
 
     public static void main(String[] args) {
-        System.out.println(getFrequency(2565255, 5));
+        System.out.println(getFrequency(145141, 5));
     }
 }
