@@ -11,6 +11,6 @@ public class DecimalToOctal {
     }
 
     public static void main(String[] args) {
-        System.out.println(getOctal(634));
+        System.out.println(getOctal(63));
     }
 }
