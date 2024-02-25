@@ -23,8 +23,8 @@ public class sumOfTwoArrays {
     }
 
     public static void main(String[] args) {
-        int[] a = { 1, 2, 3, 4 };
-        int[] b = { 9, 1, 2, 3, 4 };
+        int[] a = {7, 1, 2, 3, 4 };
+        int[] b = { 9, 2, 3, 4 };
         System.out.println(Arrays.toString(getSum2(a, b, a.length, b.length)));
     }
 }
