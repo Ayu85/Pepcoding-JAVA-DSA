@@ -9,9 +9,15 @@ public class sumOfTwoArrays {
         int[] sum = new int[n1 > n2 ? n1 : n2];
         int i = n1 - 1;
         int j = n2 - 1;
-        int k=sum.length-1;
+        int k = sum.length - 1;
         while (i >= 0 && j >= 0) {
             sum[k--] = arr1[i--] + arr2[j--];
+        }
+        while (i >= 0) {
+            sum[k--] = arr1[i--];
+        }
+        while (j >= 0) {
+            sum[k--] = arr2[j--];
         }
         return sum;
     }
