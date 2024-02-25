@@ -5,8 +5,8 @@ public class Basics {
         st.push(10);
         st.push(20);
         st.pop();
-        st.pop();
 
-        System.out.println(st);
+
+        System.out.println(    st.peek());
     }
 }
