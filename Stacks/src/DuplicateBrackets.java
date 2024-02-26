@@ -21,9 +21,9 @@ public class DuplicateBrackets {
 
     public static void main(String[] args) {
         String exp = "((a+b)+(c+d))";
-        String exp2 = "(a+b)+((c+d))";
+        String exp2 = "((a+(b))+(c+d))";
         String exp3 = "((a+b)+((c+d)))";
-        String exp4 = "(((a+(b))+c+d))";
+        String exp4 = "((a+b)+c)";
         System.out.println(checkDuplicates(exp4));
     }
 }
