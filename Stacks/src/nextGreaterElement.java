@@ -17,6 +17,6 @@ public class nextGreaterElement {
     }
 
     public static void main(String[] args) {
-        System.out.println(getGreaterElements(new int[]{2, 5, 9, 3, 1, 12,6, 8, 7,8}));
+        System.out.println(getGreaterElements(new int[]{2, 5, 9, 3, 1, 12,6, 8, 7}));
     }
 }
