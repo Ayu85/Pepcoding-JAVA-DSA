@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+import java.util.Stack;
 public class stock_span {
     static int[] getSpan(int[] arr, int n) {
         int[] temp = new int[n];
@@ -28,6 +28,9 @@ public class stock_span {
                 temp[k--] = count;
         }
         return temp;
+    }
+    static int[] getSpan2(int[] arr,int n){
+        Stack<Integer> stk=new Stack<>();
     }
 
     public static void main(String[] args) {
