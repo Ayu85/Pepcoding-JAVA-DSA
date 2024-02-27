@@ -37,17 +37,14 @@ public class stock_span {
         temp[0] = 1;
         stk.push(0); // for keeping track of largest indices
         for (int i = 1; i < n; i++) {
-            if (arr[stk.peek()] > arr[i] && !(arr[i - 1] > arr[i])) {
-                temp[i] = i - stk.peek();
-            } else if (arr[i - 1] > arr[i]) {
-                stk.push(i - 1);
-                temp[i] = i - stk.peek();
-            } else {
-                while (arr[stk.peek()] < arr[i]) {
-                    stk.pop();
-                }
-                temp[i] = i - stk.peek();
+            while (!stk.isEmpty() && arr[stk.peek()] <= arr[i]) {
+                stk.pop();
             }
+            if (stk.isEmpty())
+                temp[i] = i + 1;
+            else
+                temp[i] = i - stk.peek();
+            stk.push(i);
         }
         return temp;
     }
@@ -55,7 +52,7 @@ public class stock_span {
     public static void main(String[] args) {
         int[] arr = {60, 70, 80, 100, 90, 75, 80, 120};
         int[] arr2 = {5, 3, 8, 7, 10, 7, 7, 12, 16};
-        int[] arr3 = {100, 80, 60, 70, 60, 75, 85};
+        int[] arr3 = {0, 4, 5, 90, 120, 80 };
         System.out.println(Arrays.toString(getSpan2(arr3, arr3.length)));
     }
 }
