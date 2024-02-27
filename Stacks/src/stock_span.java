@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Stack;
+
 public class stock_span {
     static int[] getSpan(int[] arr, int n) {
         int[] temp = new int[n];
@@ -29,14 +30,26 @@ public class stock_span {
         }
         return temp;
     }
-    static int[] getSpan2(int[] arr,int n){
-        Stack<Integer> stk=new Stack<>();
+
+    static int[] getSpan2(int[] arr, int n) {
+        Stack<Integer> stk = new Stack<>();
+        int[] temp = new int[n];
+        temp[0] = 1;
+        stk.push(0); // for keeping track of largest indices
+        for (int i = 1; i < n; i++) {
+            if (arr[stk.peek()] > arr[i]) {
+                temp[i] = i - stk.peek();
+            } else {
+                stk.push(i);
+                temp[i] = i + 1;
+            }
+        }
+        return temp;
     }
 
     public static void main(String[] args) {
         int[] arr = {60, 70, 80, 100, 90, 75, 80, 120};
         int[] arr2 = {5, 3, 8, 7, 10, 7, 7, 12, 16};
-
-        System.out.println(Arrays.toString(getSpan(arr2, arr2.length)));
+        System.out.println(Arrays.toString(getSpan2(arr2, arr2.length)));
     }
 }
