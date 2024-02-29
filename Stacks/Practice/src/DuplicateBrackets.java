@@ -11,8 +11,7 @@ public class DuplicateBrackets {
                 else {
                     while (stk.peek() != '(')
                         stk.pop();
-                    if (stk.peek() == '(')
-                        stk.pop();
+                    stk.pop();
                 }
             } else
                 stk.push(ch);
@@ -21,7 +20,7 @@ public class DuplicateBrackets {
     }
 
     public static void main(String[] args) {
-        String s1 = "((a+b) +c)";
+        String s1 = "(a+b) +(c+d)";
         System.out.println(checkString(s1));
     }
 }
