@@ -23,7 +23,7 @@ public class DuplicateBrackets {
         String exp = "((a+b)+(c+d))";
         String exp2 = "((a+(b))+(c+d))";
         String exp3 = "((a+b)+((c+d)))";
-        String exp4 = "((a+b)+c)";
-        System.out.println(checkDuplicates(exp4));
+        String exp4 = "(a+b)+(c+d)";
+        System.out.println(checkDuplicates(exp));
     }
 }
