@@ -8,12 +8,12 @@ public class nextGreaterOnRight {
         stk.push(arr[arr.length - 1]);
         temp[temp.length - 1] = -1;
         for (int i = arr.length - 2; i >= 0; i--) {
-            if (stk.peek() > arr[i]) {
+            if (!stk.isEmpty() &&stk.peek() > arr[i]) {
                 temp[k--] = stk.peek();
             } else if (stk.isEmpty()) {
                 temp[k--] = -1;
             } else {
-                while (!stk.isEmpty() && stk.peek() < arr[i])
+                while (!stk.isEmpty() && stk.peek() <= arr[i])
                     stk.pop();
                 temp[k--] = stk.isEmpty() ? -1 : stk.peek();
             }
@@ -23,6 +23,6 @@ public class nextGreaterOnRight {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getNextGreaters(new int[]{13 , 7, 6 , 12})));
+        System.out.println(Arrays.toString(getNextGreaters(new int[]{6 ,8 ,0, 1, 3})));
     }
 }
