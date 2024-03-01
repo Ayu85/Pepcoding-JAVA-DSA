@@ -10,21 +10,19 @@ public class nextGreaterOnRight {
         for (int i = arr.length - 2; i >= 0; i--) {
             if (stk.peek() > arr[i]) {
                 temp[k--] = stk.peek();
-                stk.push(arr[i]);
             } else if (stk.isEmpty()) {
                 temp[k--] = -1;
-                stk.push(arr[i]);
             } else {
-                while (stk.peek() < arr[i])
+                while (!stk.isEmpty() && stk.peek() < arr[i])
                     stk.pop();
-                temp[k--] = stk.peek();
-                stk.push(arr[i]);
+                temp[k--] = stk.isEmpty() ? -1 : stk.peek();
             }
+            stk.push(arr[i]);
         }
         return temp;
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getNextGreaters(new int[]{1, 3, 2, 4})));
+        System.out.println(Arrays.toString(getNextGreaters(new int[]{13 , 7, 6 , 12})));
     }
 }
