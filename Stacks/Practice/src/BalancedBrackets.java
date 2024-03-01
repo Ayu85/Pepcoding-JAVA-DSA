@@ -26,6 +26,9 @@ public class BalancedBrackets {
 
     public static void main(String[] args) {
         String s1 = "[(a+b)+{(c+d)*(e/f)}";
-        System.out.println(checkBalanced(s1));
+        String s2="{[()]}";
+        String s3="{[(])}";
+        String s4="{{[[(())]]}}";
+        System.out.println(checkBalanced(s4));
     }
 }
