@@ -22,6 +22,6 @@ public class nextSmallerToRight {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getSmaller(new int[]{4, 5, 2, 10, 8}, 5)));
+        System.out.println(Arrays.toString(getSmaller(new int[]{9,2,0,1}, 4)));
     }
 }
