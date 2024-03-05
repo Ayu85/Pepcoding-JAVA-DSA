@@ -7,12 +7,14 @@ public class stockSpan {
         stk.push(0);
         temp[0] = 1;
         for (int i = 1; i < n; i++) {
-            if (arr[stk.peek()] < arr[i]) {
-                while (arr[stk.peek()] < arr[i]) {
+            if (!stk.isEmpty() && arr[stk.peek()] < arr[i]) {
+                while (!stk.isEmpty() && arr[stk.peek()] < arr[i]) {
                     stk.pop();
-                    temp[i] = i - stk.peek();
                 }
-            } else {
+                temp[i] = stk.isEmpty() ? i+1 : i - stk.peek();
+            } else if (stk.isEmpty())
+                temp[i] = i;
+            else {
                 temp[i] = 1;
             }
             stk.push(i);
