@@ -12,8 +12,7 @@ public class stockSpan {
                     stk.pop();
                 }
                 temp[i] = stk.isEmpty() ? i+1 : i - stk.peek();
-            } else if (stk.isEmpty())
-                temp[i] = i;
+            }
             else {
                 temp[i] = 1;
             }
@@ -23,6 +22,6 @@ public class stockSpan {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(getStockSpan(new int[]{100, 80, 60, 70, 60, 75, 85}, 7)));
+        System.out.println(Arrays.toString(getStockSpan(new int[]{20 ,12 ,1 ,28, 16, 20 }, 6)));
     }
 }
