@@ -20,7 +20,7 @@ public class maxAreaHistogram {
         for (int i = 0; i < n; i++) {
             int nsl = getNSL(arr, i);
             int nsr = getNSR(arr, i);
-            int area = (nsr - nsl-1) * arr[i];
+            int area = (nsr - nsl - 1) * arr[i];
             if (area > maxArea)
                 maxArea = area;
         }
@@ -29,7 +29,7 @@ public class maxAreaHistogram {
 
     public static void main(String[] args) {
         int[] arr = {6, 2, 5, 4, 5, 1, 6};
-        int [] arr2={2, 1, 5, 6, 2, 3};
-        System.out.println(getMaxArea(arr2,arr2.length));
+        int[] arr2 = {2,4};
+        System.out.println(getMaxArea(arr2, arr2.length));
     }
 }
