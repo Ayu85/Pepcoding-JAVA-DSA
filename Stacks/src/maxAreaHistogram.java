@@ -29,6 +29,7 @@ public class maxAreaHistogram {
 
     public static void main(String[] args) {
         int[] arr = {6, 2, 5, 4, 5, 1, 6};
-        System.out.println(getMaxArea(arr,arr.length));
+        int [] arr2={2, 1, 5, 6, 2, 3};
+        System.out.println(getMaxArea(arr2,arr2.length));
     }
 }
