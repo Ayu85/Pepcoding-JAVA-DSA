@@ -61,6 +61,6 @@ public class maxAreaHistogram2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(getMaxAreaHist(new int[]{2,1,5,6,3}, 7));
+        System.out.println(getMaxAreaHist(new int[]{2,1,6,3}, 4));
     }
 }
